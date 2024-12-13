@@ -427,7 +427,7 @@ class ChatController extends ChangeNotifier {
       // _pickedImageFiles = [];
       // pickedImageFileStored = [];
 
-      platformFile?.forEach((element) {
+      platformFile.forEach((element) {
         if(ImageSize.getFileSizeFromPlatformFileToDouble(element) > AppConstants.maxSizeOfASingleFile) {
           _singleFIleCrossMaxLimit = true;
         } else{
@@ -441,10 +441,10 @@ class ChatController extends ChangeNotifier {
         }
       });
 
-      if(objFile?.length == AppConstants.maxLimitOfTotalFileSent && platformFile != null &&   platformFile.length > AppConstants.maxLimitOfTotalFileSent){
+      if(objFile?.length == AppConstants.maxLimitOfTotalFileSent &&   platformFile.length > AppConstants.maxLimitOfTotalFileSent){
         _pickedFIleCrossMaxLength = true;
       }
-      if(objFile?.length == AppConstants.maxLimitOfTotalFileSent && platformFile != null && ImageSize.getMultipleFileSizeFromPlatformFiles(platformFile) > AppConstants.maxLimitOfFileSentINConversation){
+      if(objFile?.length == AppConstants.maxLimitOfTotalFileSent && ImageSize.getMultipleFileSizeFromPlatformFiles(platformFile) > AppConstants.maxLimitOfFileSentINConversation){
         _pickedFIleCrossMaxLimit = true;
       }
     }

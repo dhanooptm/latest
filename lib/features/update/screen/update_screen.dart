@@ -52,7 +52,7 @@ class UpdateScreen extends StatelessWidget {
               }else if(Platform.isIOS) {
                 appUrl = Provider.of<SplashController>(context, listen: false).configModel?.userAppVersionControl?.forAndroid?.link;
               }
-              if(await canLaunchUrlString(appUrl!)) {
+              if(await canLaunchUrlString(appUrl)) {
                 launchUrlString(appUrl, mode: LaunchMode.externalApplication);
               }else {
                 showCustomSnackBar('${getTranslated('can_not_launch', Get.context!)!}  $appUrl', Get.context!);

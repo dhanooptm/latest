@@ -106,10 +106,8 @@ class AuthRepository implements AuthRepoInterface{
     }else {
       deviceToken = await FirebaseMessaging.instance.getToken();
     }
-    if (deviceToken != null) {
-      log('--------Device Token---------- $deviceToken--');
-    }
-    return deviceToken;
+    log('--------Device Token---------- $deviceToken--');
+      return deviceToken;
   }
 
 

@@ -224,7 +224,7 @@ class MessageBubbleWidget extends StatelessWidget {
                                     : await getApplicationSupportDirectory();
                               }
                               chatProvider.downloadFile(
-                                  files[index].path!, directory!.path,
+                                  files[index].path!, directory.path,
                                   "${directory.path}/${files[index].key}", ""
                                   "${files[index].key}"
                               );
